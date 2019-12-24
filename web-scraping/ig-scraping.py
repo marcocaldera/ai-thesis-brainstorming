@@ -6,6 +6,7 @@ import time
 from selenium.webdriver.common.keys import Keys
 from collections import Counter
 from functions import set_browser
+from constant import USERNAME, PASSWORD
 
 
 def get_first_12_photos():
@@ -38,8 +39,8 @@ def get_first_12_photos():
 def login(browser):
     browser.get('https://www.instagram.com/accounts/login')
     time.sleep(1)
-    browser.find_element_by_name("username").send_keys('')
-    browser.find_element_by_name("password").send_keys('')
+    browser.find_element_by_name("username").send_keys(USERNAME)
+    browser.find_element_by_name("password").send_keys(PASSWORD)
     browser.find_element_by_xpath('//button[normalize-space()="Log In"]').click()
     time.sleep(3)
     # browser.quit()
