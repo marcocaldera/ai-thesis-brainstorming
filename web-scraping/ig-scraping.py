@@ -5,8 +5,7 @@ import urllib.request
 import time
 from selenium.webdriver.common.keys import Keys
 from collections import Counter
-from functions import set_browser
-from constant import USERNAME, PASSWORD
+from functions import set_browser, login
 
 
 def get_first_12_photos():
@@ -26,25 +25,6 @@ def get_first_12_photos():
 
 
 # get_first_12_photos()
-
-# def set_browser():
-#     options = webdriver.ChromeOptions()
-#     options.add_argument('headless')
-#     browser = webdriver.Chrome(executable_path='./chromedriver',
-#                                chrome_options=options
-#                                )
-#     return browser
-
-
-def login(browser):
-    browser.get('https://www.instagram.com/accounts/login')
-    time.sleep(1)
-    browser.find_element_by_name("username").send_keys(USERNAME)
-    browser.find_element_by_name("password").send_keys(PASSWORD)
-    browser.find_element_by_xpath('//button[normalize-space()="Log In"]').click()
-    time.sleep(3)
-    # browser.quit()
-
 
 def infinite_scrolling(browser):
     url = "https://www.instagram.com/marcocaldera_/"

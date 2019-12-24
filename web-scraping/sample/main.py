@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from functions import source_page
+# from functions import source_page
 import pandas as pd
 
 page = requests.get(
