@@ -20,7 +20,7 @@ def post(browser):
     # click sulla prima foto
     browser.find_element_by_class_name("v1Nh3.kIKUG._bz0w").click()
 
-    #info: prendere solo il primo commento se è dell'utente indicato
+    # info: prendere solo il primo commento se è dell'utente indicato
     user = []
     description = []
     published = []
